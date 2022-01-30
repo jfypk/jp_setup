@@ -26,7 +26,7 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
-  install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
+  # install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
   success_msg("installed")
 end

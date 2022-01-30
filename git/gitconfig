@@ -116,7 +116,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.jp_setup/git/gitignore
+  excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]

@@ -75,7 +75,6 @@ highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 highlight clear LineNr
 highlight clear SignColumn
-colorscheme dracula " solarized
 set background=dark
 
 " =============== GUI =================================
@@ -667,3 +666,6 @@ set showcmd
 
 "Return to last edit postiion when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+colorscheme dracula " solarized
