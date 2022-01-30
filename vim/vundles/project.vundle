@@ -1,0 +1,6 @@
+Bundle "preservim/nerdtree.git"
+Bundle 'JazzCore/ctrlp-cmatcher'
+Bundle 'junegunn/fzf'
+Bundle "xolox/vim-misc"
+Bundle "ryanoasis/vim-devicons"
+Bundle "jlanzarotta/bufexplorer"
