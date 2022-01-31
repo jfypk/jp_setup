@@ -197,8 +197,9 @@ alias la='ls -FGlAhp'                       # Backup preferred 'ls' implementati
 alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
+<<<<<<< HEAD
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias v="nvim"
+alias v="cd ~/src/retail && nvim"
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -260,6 +261,14 @@ ii() {
     #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
     echo
 }
+
+#Betterment specific
+alias retail='cd ~/src/retail'
+alias stylecloset='cd ~/src/style-closet'
+alias cuser='cd ~/src/retail/retail && bundle exec rake create_user'
+alias retailupdate='cd ~/src/retail/retail && ./script/setup.sh'
+alias debug="RUBY_DEBUG_PORT=1234 rails s -p 3001 -P debug.pid -b 'retail.test'"
+alias webpack="cd ~/src/retail/retail && ./bin/webpack-dev-server"
 
 ################
 # blocksize    #
@@ -485,3 +494,4 @@ if [ -f '/Users/jpark/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jpark/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jpark/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jpark/google-cloud-sdk/completion.zsh.inc'; fi
+source "$HOME/.bootstrap/env.sh"
