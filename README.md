@@ -10,6 +10,7 @@ Then run:
 - use the `ve` alias to see the vimrc and its aliases & shortcuts
 - use the `ze` alias to see the zshrc and its aliases & shortcuts
 - use `zr` to source zshrc
+- use `^r` to reverse search previous commands in zsh
 
 ## Images
 
