@@ -152,7 +152,7 @@ set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 set tw=500
-set colorcolumn=80
+set colorcolumn=80,150
 
 " ================ Folds ============================
 
@@ -669,3 +669,4 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 colorscheme dracula " solarized
+hi ColorColumn ctermbg=lightcyan guibg=blue
