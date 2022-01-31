@@ -454,3 +454,4 @@ export VISUAL=vim
 autoload -U zmv
 alias zmv="noglob zmv -W"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
