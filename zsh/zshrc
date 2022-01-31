@@ -208,7 +208,8 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-alias weather='curl -4 wttr.in'
+alias weather="curl -s 'wttr.in/?format=3'"
+alias weatherlong="curl -s 'wttr.in/?format=v2'"
 
 function cd {
     builtin cd "$@" && ls -lh;
@@ -355,7 +356,7 @@ bindkey "^X^L" insert-last-command-output
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="cobalt2"
+ZSH_THEME="lukerandall"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -437,7 +438,8 @@ source $ZSH/oh-my-zsh.sh
 autoload promptinit
 fpath=($HOME/.jp-setup/zsh/prezto-themes $HOME/.zsh.prompts $fpath)
 promptinit
-prompt skwp
+# prompt skwp
+# prompt powerline
 
 ################
 # vi mode      #
