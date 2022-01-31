@@ -10,3 +10,11 @@ Then run:
 - use the `ve` alias to see the vimrc and its aliases & shortcuts
 - use the `ze` alias to see the zshrc and its aliases & shortcuts
 - use `zr` to source zshrc
+
+## Images
+
+### Vim
+![vim](./images/vim.png)
+
+### tmux
+![tmux](./images/tmux.png)
