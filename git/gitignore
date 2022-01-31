@@ -47,3 +47,10 @@ Session.vim
 .sass-cache
 
 .undodir
+
+# heavy files
+# ----------------------------------------------------------------------------------------------
+node_modules/
+tmp/
+cache/
+vendor/

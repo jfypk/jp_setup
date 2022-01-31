@@ -1,6 +1,7 @@
 Bundle "preservim/nerdtree.git"
 Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Bundle 'junegunn/fzf.vim'
 Bundle "xolox/vim-misc"
 Bundle "ryanoasis/vim-devicons"
 Bundle "jlanzarotta/bufexplorer"
