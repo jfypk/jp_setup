@@ -222,24 +222,21 @@ end
 
 def install_prezto
   puts
-  puts "Installing Prezto (ZSH Enhancements)..."
+  puts "Installing ZSH Enhancements..."
 
-  # run %{ ln -nfs "$HOME/.jp_setup/zsh/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
   run %{ ln -nfs "$HOME/.jp_setup/zsh/zshrc" "$HOME/.zshrc" }
 
-  # The prezto runcoms are only going to be installed if zprezto has never been installed
-  # install_files(Dir.glob('zsh/prezto-override/zshrc'), :symlink)
-  # install_files(Dir.glob('zsh/prezto/runcoms/zlogin'), :symlink)
-  # install_files(Dir.glob('zsh/prezto/runcoms/zlogout'), :symlink)
-  # install_files(Dir.glob('zsh/prezto-override/zpreztorc'), :symlink)
-  # install_files(Dir.glob('zsh/prezto/runcoms/zprofile'), :symlink)
-  # install_files(Dir.glob('zsh/prezto/runcoms/zshenv'), :symlink)
+  run %{
+    cd $HOME/.jp_setup/zsh/zsh
+    git clone https://github.com/ohmyzsh/ohmyzsh.git
+  }
 
-  # puts
-  # puts "Creating directories for your customizations"
-  # run %{ mkdir -p $HOME/.zsh.before }
-  # run %{ mkdir -p $HOME/.zsh.after }
-  # run %{ mkdir -p $HOME/.zsh.prompts }
+  run %{
+    cd $HOME/.jp_setup/zsh/zsh/ohmyzsh/custom/plugins
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git
+    cp $HOME/.jp_setup/cobalt2.zsh-theme $HOME/.jp_setup/zsh/zsh/ohmyzsh/custom/themes
+  }
 
   if "#{ENV['SHELL']}".include? 'zsh' then
     puts "Zsh is already configured as your shell of choice. Restart your session to load the new settings"
