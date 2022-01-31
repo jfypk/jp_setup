@@ -1,3 +1,5 @@
+Heavily stolen and modified from [yadr](https://github.com/skwp/dotfiles)
+
 ## Installation
 
 `git clone https://github.com/jfypk/jp_setup.git ~/.jp_setup`
