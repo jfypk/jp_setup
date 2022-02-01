@@ -21,3 +21,8 @@ Then run:
 
 ### tmux
 ![tmux](./images/tmux.png)
+
+#TODO
+- add cask/barrel
+- add htop
+
