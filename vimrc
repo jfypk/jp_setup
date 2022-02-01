@@ -244,6 +244,7 @@ nmap ,af :AgFile ""<Left>
 " AutoTag
 "========================================
 " Seems to have problems with some vim files
+let g:auto_ctags = 1
 let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
 
 "CamelCaseMotion
