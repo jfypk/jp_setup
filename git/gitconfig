@@ -137,3 +137,4 @@
   email = jypark03@gmail.com
 [init]
 	templatedir = /Users/jeffreypark/.git-templates
+	defaultBranch = main

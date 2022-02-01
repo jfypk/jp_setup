@@ -125,7 +125,7 @@ set colorcolumn=80,150
 " ================ Folds ============================
 
 set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+set foldnestmax=10       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
@@ -259,7 +259,6 @@ sunmap E
 
 "TODO: Deoplete (need neoplete...)
 "========================================
-" also TODO: solarized
 
 "Easymotion
 "========================================
@@ -432,12 +431,18 @@ nmap <Space> <Plug>SneakForward
 
 "Syntastic
 "========================================
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 "automatically jump to the error when saving the file
 let g:syntastic_auto_jump=0
 "show the error list automatically
 let g:syntastic_auto_loc_list=1
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 "don't care about warnings
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
@@ -643,7 +648,7 @@ set showcmd
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-colorscheme dracula " solarized
+colorscheme dracula
 hi ColorColumn ctermbg=lightcyan guibg=blue
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE

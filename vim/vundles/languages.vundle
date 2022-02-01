@@ -13,3 +13,4 @@ Bundle 'maxmellon/vim-jsx-pretty'
 Bundle 'peitalin/vim-jsx-typescript'
 Bundle 'styled-components/vim-styled-components'
 Bundle 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Bundle 'dense-analysis/ale'
