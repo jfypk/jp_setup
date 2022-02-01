@@ -302,6 +302,13 @@ if type ag &> /dev/null; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 fi
 
+fco() {
+  local branches branch
+  branches=$(git branch -vv) &&
+    branch=$(echo "$branches" | fzf --height 10% +m) &&
+    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
 # Auto-completion
 # ---------------
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
