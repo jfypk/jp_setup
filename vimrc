@@ -299,7 +299,7 @@ nnoremap <silent> ,gf   :vertical botright wincmd F<CR>
 
 "Goyo
 "========================================
-let g:goyo_width=100
+let g:goyo_width=120
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> ,gy :Goyo<cr>
@@ -311,9 +311,9 @@ let g:limelight_conceal_guifg = 'DarkGray'
 
 let g:limelight_conceal_ctermfg = 'gray'
 
-" fugitive.git
-" ========================================
-" For fugitive.git, dp means :diffput. Define dg to mean :diffget
+"fugitive.git
+"========================================
+"For fugitive.git, dp means :diffput. Define dg to mean :diffget
 nnoremap <silent> ,dg :diffget<CR>
 nnoremap <silent> ,dp :diffput<CR>
 
@@ -387,6 +387,11 @@ if has("gui_running")
 else
   set shell=bash\ -l
 endif
+
+"Prettier
+"========================================
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 "Quickfix search
 "========================================

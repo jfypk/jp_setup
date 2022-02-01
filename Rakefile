@@ -235,7 +235,7 @@ def install_prezto
     cd $HOME/.jp_setup/zsh/zsh/ohmyzsh/custom/plugins
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
     git clone https://github.com/zsh-users/zsh-autosuggestions.git
-    cp $HOME/.jp_setup/cobalt2.zsh-theme $HOME/.jp_setup/zsh/zsh/ohmyzsh/custom/themes
+    cp $HOME/.jp_setup/zsh/cobalt2.zsh-theme $HOME/.jp_setup/zsh/zsh/ohmyzsh/custom/themes
   }
 
   if "#{ENV['SHELL']}".include? 'zsh' then
