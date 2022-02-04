@@ -160,6 +160,7 @@ alias tma="tmux attach-session -t"
 alias tmc="clear && tmux clear-history"
 alias tmk="tmux kill-session && tmux ls"
 alias tm="tmux new -s " $1
+alias tmain="~/.jp_setup/tmux/starttmux.sh"
 
 # rm
 # Override rm -i alias which makes rm prompt for every action
