@@ -8,17 +8,15 @@ then
   tmux new-session -d -s $session -n vim
   tmux send-keys "v" C-m
 
-  tmux new-window -n 'shell'
-  tmux splitw -h -p 35
+  tmux new-window -n 'git & tasks'
+  tmux send-keys "cd ~/Documents/Code" C-m
+  tmux splitw -h -p 50
    # Select pane 2
   tmux selectp -t 2
-  tmux send-keys "cal" C-m
-  # Split pane 2 vertiacally by 25%
-  tmux splitw -v -p 75
-  tmux selectp -t 3
-  tmux send-keys "weatherlong" C-m
+  tmux send-keys "~/.jp_setup/taskwarrior/taskwarrior-tui" C-m \;
   tmux selectp -t 1
-  tmux send-keys "cd ~/Documents/Code" C-m
+
+  tmux new-window -n 'shell'
 
   # return to main vim window
   tmux select-window -t 'vim'

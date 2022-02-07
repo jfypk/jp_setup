@@ -220,6 +220,14 @@ def ask(message, values)
   values[selection]
 end
 
+def install_task
+  puts
+  puts "symlinking Task"
+
+  run %{ ln -nfs "$HOME/.jp_setup/taskwarrior/task" "$HOME/.task" }
+  run %{ ln -nfs "$HOME/.jp_setup/taskwarrior/taskrc" "$HOME/.taskrc" }
+end
+
 def install_prezto
   puts
   puts "Installing ZSH Enhancements..."
