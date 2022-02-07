@@ -23,6 +23,7 @@ task :install => [:submodule_init, :submodules] do
   end
 
   Rake::Task["install_prezto"].execute
+  Rake::Task["install_task"].execute
 
   install_fonts
 
