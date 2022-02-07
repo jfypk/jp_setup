@@ -649,9 +649,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 colorscheme dracula
-hi ColorColumn ctermbg=lightcyan guibg=blue
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+set background=dark
+hi ColorColumn ctermbg=lightcyan guibg=blue
 highlight clear LineNr
 highlight clear SignColumn
-" set background=dark
