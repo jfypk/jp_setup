@@ -21,3 +21,7 @@
 {"description":"test 6","end":"20220206T061407Z","entry":"20220206T061355Z","modified":"20220206T061407Z","status":"completed","uuid":"e60bc613-9321-4339-963d-c48d3402015d"}
 {"description":"test 7","end":"20220206T061407Z","entry":"20220206T061357Z","modified":"20220206T061407Z","status":"completed","uuid":"db926833-d4cd-4191-8ca7-d8d6abfa8ce7"}
 {"description":"system design practice","entry":"20220206T062803Z","modified":"20220206T062803Z","project":"job","status":"pending","uuid":"12b96b59-7edd-4a98-b0cf-51016331ba15","tags":["nsfw"]}
+{"description":"polish Domino tasks","entry":"20220207T060446Z","modified":"20220207T060446Z","status":"pending","uuid":"e674f4df-5af1-499b-91b4-4d21e178b483","tags":["sfw"]}
+{"description":"polish Domino tasks 2\/7\/22","entry":"20220207T060446Z","modified":"20220207T060528Z","status":"pending","uuid":"e674f4df-5af1-499b-91b4-4d21e178b483","tags":["sfw"]}
+{"description":"polish Domino tasks","due":"20220207T210000Z","entry":"20220207T060446Z","modified":"20220207T060608Z","status":"pending","uuid":"e674f4df-5af1-499b-91b4-4d21e178b483","tags":["sfw"]}
+{"description":"polish Domino tasks","due":"20220207T210000Z","entry":"20220207T060446Z","modified":"20220207T060653Z","project":"Domino","status":"pending","uuid":"e674f4df-5af1-499b-91b4-4d21e178b483","tags":["sfw"]}
