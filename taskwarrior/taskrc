@@ -105,6 +105,7 @@ context.important_and_urgent=+iu
 context.important_and_not_urgent=+i
 context.unimportant_and_urgent=+u
 context.tag_or_delegate=-iu -i -u -w -p -e
+context.priority=+next
 
 # Enable hooks for Kusarigama
 # https://github.com/yanick/Taskwarrior-Kusarigama#name
