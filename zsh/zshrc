@@ -185,6 +185,7 @@ alias -g G='| grep' # now you can do: ls foo G something
 # usage: fn foo
 # to find all files containing 'foo' in the name
 function fn() { ls **/*$1* }
+tt() {~/.jp_setup/taskwarrior/taskwarrior-tui}
 
 # From bash_profile
 alias files='cd /Volumes/Files'

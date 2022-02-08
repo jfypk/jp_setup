@@ -294,3 +294,49 @@ time 1644291136
 old [description:"test uda.priority:4" entry:"1644291133" modified:"1644291133" status:"pending" uuid:"e87e17ce-ceeb-419b-957b-29930914a521"]
 new [description:"test uda.priority:4" end:"1644291136" entry:"1644291133" modified:"1644291136" status:"deleted" uuid:"e87e17ce-ceeb-419b-957b-29930914a521"]
 ---
+time 1644298980
+new [description:"reassess goals\/habits\/inbox" entry:"1644298980" modified:"1644298980" project:"self" status:"pending" tags:"p" tags_p:"x" uuid:"85a7089a-d13e-4042-85fa-8edc61926ffc"]
+---
+time 1644298997
+old [description:"reassess goals\/habits\/inbox" entry:"1644298980" modified:"1644298980" project:"self" status:"pending" tags:"p" tags_p:"x" uuid:"85a7089a-d13e-4042-85fa-8edc61926ffc"]
+new [description:"reassess goals\/habits\/inbox" entry:"1644298980" modified:"1644298997" project:"self" status:"pending" tags:"i,p" tags_i:"x" tags_p:"x" uuid:"85a7089a-d13e-4042-85fa-8edc61926ffc"]
+---
+time 1644299016
+old [description:"connect FLASK backend to google sql table" entry:"1644290980" modified:"1644290980" project:"avery" status:"pending" tags:"p" tags_p:"x" uuid:"3bdc201a-8256-4930-b8fe-677cff19b52f"]
+new [description:"connect FLASK backend to google sql table" entry:"1644290980" modified:"1644299016" project:"avery" status:"pending" tags:"i,p" tags_i:"x" tags_p:"x" uuid:"3bdc201a-8256-4930-b8fe-677cff19b52f"]
+---
+time 1644299021
+old [description:"polish Domino tasks" due:"1644296400" entry:"1644213886" modified:"1644290299" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+new [description:"polish Domino tasks" due:"1644296400" entry:"1644213886" modified:"1644299021" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+---
+time 1644299023
+old [description:"add eventing to domino list" due:"1644296400" entry:"1644276845" modified:"1644281881" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+new [description:"add eventing to domino list" due:"1644296400" entry:"1644276845" modified:"1644299023" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+---
+time 1644299032
+old [description:"add eventing to domino list" due:"1644296400" entry:"1644276845" modified:"1644299023" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+new [description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644299032" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+---
+time 1644299038
+old [description:"polish Domino tasks" due:"1644296400" entry:"1644213886" modified:"1644299021" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+new [description:"polish Domino tasks" due:"1644382799" entry:"1644213886" modified:"1644299038" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+---
+time 1644299045
+old [description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644299032" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+new [description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644299045" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+---
+time 1644299050
+old [description:"polish Domino tasks" due:"1644382799" entry:"1644213886" modified:"1644299038" project:"domino" status:"pending" tags:"next,w" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+new [description:"polish Domino tasks" due:"1644382799" entry:"1644213886" modified:"1644299050" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+---
+time 1644348772
+new [description:"write product kickoff doc" entry:"1644348772" modified:"1644348772" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+---
+time 1644348775
+old [description:"write product kickoff doc" entry:"1644348772" modified:"1644348772" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+new [description:"write product kickoff doc" entry:"1644348772" modified:"1644348775" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+---
+time 1644348782
+old [description:"write product kickoff doc" entry:"1644348772" modified:"1644348775" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+new [description:"write product kickoff doc" due:"1644382799" entry:"1644348772" modified:"1644348782" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+---
