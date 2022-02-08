@@ -27,20 +27,20 @@ search.case.sensitive=no
 list.all.projects=yes
 
 # Color theme (uncomment one to use)
-#include /usr/local/share/doc/task/rc/light-16.theme
-#include /usr/local/share/doc/task/rc/light-256.theme
-#include /usr/local/share/doc/task/rc/dark-16.theme
-#include /usr/local/share/doc/task/rc/dark-256.theme
-#include /usr/local/share/doc/task/rc/dark-red-256.theme
-#include /usr/local/share/doc/task/rc/dark-green-256.theme
-# include /usr/local/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/share/doc/task/rc/dark-violets-256.theme
-#include /usr/local/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/local/share/doc/task/rc/dark-gray-256.theme
-#include /usr/local/share/doc/task/rc/dark-gray-blue-256.theme
-include /usr/local/share/doc/task/rc/solarized-dark-256.theme
-# include /usr/local/share/doc/task/rc/solarized-light-256.theme
-#include /usr/local/share/doc/task/rc/no-color.theme
+include ~/.jp_setup/taskwarrior/task/doc/rc/dark-violets-256.theme
+
+color.overdue=rgb555 on rgb501 #white on red
+color.due.today=rgb555 on rgb035 #light blue on black
+color.due=rgb035 #light blue
+color.scheduled=rgb550 #yellow
+color.recurring=rgb205
+
+color.active=rgb000 on rgb152 #black on lime green
+color.deleted=rgb000 on rgb555 #black on white
+color.completed=rgb010 #sea green
+
+color.blocked=rgb503
+color.blocking=rgb520
 
 # Let's make our own scheduled report.
 
@@ -98,9 +98,13 @@ urgency.user.project.fun.coefficient=-1.0
 urgency.user.tag.fun.coefficient=-1.0
 
 # Contexts! I use these for everything!
-context.sfw=-nsfw
-context.nofun=project.not:fun -nsfw -fun
-context.fun=project:fun or +fun or +nsfw
+context.work=-p +w
+context.personal=+p -w
+context.errand=+e
+context.important_and_urgent=+iu
+context.important_and_not_urgent=+i
+context.unimportant_and_urgent=+u
+context.tag_or_delegate=-iu -i -u -w -p -e
 
 # Enable hooks for Kusarigama
 # https://github.com/yanick/Taskwarrior-Kusarigama#name
@@ -111,4 +115,3 @@ kusarigama.plugins=GitCommit,Renew
 # Our verbosity does not include the 2.6.x 'override' value, so I don't get warned of
 # custom overrides in my shell aliases and functions.
 verbose=blank,header,footnote,label,new-id,affected,edit,special,project,sync,unwait,recur
-context=sfw
