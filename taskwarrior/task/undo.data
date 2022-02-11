@@ -340,3 +340,52 @@ time 1644348782
 old [description:"write product kickoff doc" entry:"1644348772" modified:"1644348775" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
 new [description:"write product kickoff doc" due:"1644382799" entry:"1644348772" modified:"1644348782" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
 ---
+time 1644354232
+old [description:"write product kickoff doc" due:"1644382799" entry:"1644348772" modified:"1644348782" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+new [description:"write product kickoff doc" due:"1644382799" end:"1644354232" entry:"1644348772" modified:"1644354232" project:"domino" status:"completed" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
+---
+time 1644354246
+old [description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644299045" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+new [annotation_1644354246:"add mixpanel and segment events" description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644354246" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+---
+time 1644380483
+old [annotation_1644354246:"add mixpanel and segment events" description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644354246" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+new [annotation_1644354246:"add mixpanel and segment events" description:"add eventing to domino list" due:"1644382799" end:"1644380483" entry:"1644276845" modified:"1644380483" project:"domino" status:"completed" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
+---
+time 1644380484
+old [description:"polish Domino tasks" due:"1644382799" entry:"1644213886" modified:"1644299050" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+new [description:"polish Domino tasks" due:"1644382799" end:"1644380484" entry:"1644213886" modified:"1644380484" project:"domino" status:"completed" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
+---
+time 1644420854
+new [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644420854" status:"pending" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+---
+time 1644420864
+old [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644420854" status:"pending" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+new [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644420864" status:"pending" tags:"w" tags_w:"x" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+---
+time 1644423629
+new [description:"do api sync with matt murphy" due:"1644469199" entry:"1644423629" modified:"1644423629" status:"pending" tags:"w" tags_w:"x" uuid:"ee9e763e-36a8-44e5-987f-2f8409532687"]
+---
+time 1644423640
+old [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644420864" status:"pending" tags:"w" tags_w:"x" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+new [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644423640" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+---
+time 1644423650
+old [description:"do api sync with matt murphy" due:"1644469199" entry:"1644423629" modified:"1644423629" status:"pending" tags:"w" tags_w:"x" uuid:"ee9e763e-36a8-44e5-987f-2f8409532687"]
+new [description:"do api sync with matt murphy" due:"1644469199" entry:"1644423629" modified:"1644423650" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"ee9e763e-36a8-44e5-987f-2f8409532687"]
+---
+time 1644423677
+new [description:"point tickets 14:00:00" due:"1644469200" entry:"1644423677" modified:"1644423677" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"c10a9bf0-65ac-484d-8094-1d2947b627b7"]
+---
+time 1644594335
+old [description:"point tickets 14:00:00" due:"1644469200" entry:"1644423677" modified:"1644423677" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"c10a9bf0-65ac-484d-8094-1d2947b627b7"]
+new [description:"point tickets 14:00:00" due:"1644469200" end:"1644594335" entry:"1644423677" modified:"1644594335" project:"domino" status:"completed" tags:"w" tags_w:"x" uuid:"c10a9bf0-65ac-484d-8094-1d2947b627b7"]
+---
+time 1644594336
+old [description:"kickoff meeting" due:"1644469199" entry:"1644420854" modified:"1644423640" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+new [description:"kickoff meeting" due:"1644469199" end:"1644594336" entry:"1644420854" modified:"1644594336" project:"domino" status:"completed" tags:"w" tags_w:"x" uuid:"3f8ce5f8-6113-4a3b-91a0-3e335dece4f9"]
+---
+time 1644594336
+old [description:"do api sync with matt murphy" due:"1644469199" entry:"1644423629" modified:"1644423650" project:"domino" status:"pending" tags:"w" tags_w:"x" uuid:"ee9e763e-36a8-44e5-987f-2f8409532687"]
+new [description:"do api sync with matt murphy" due:"1644469199" end:"1644594336" entry:"1644423629" modified:"1644594336" project:"domino" status:"completed" tags:"w" tags_w:"x" uuid:"ee9e763e-36a8-44e5-987f-2f8409532687"]
+---

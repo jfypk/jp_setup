@@ -1,6 +1,3 @@
-[description:"add eventing to domino list" due:"1644382799" entry:"1644276845" modified:"1644299045" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"cea6d687-9c99-4c8d-84fe-36038d8164c9"]
-[description:"polish Domino tasks" due:"1644382799" entry:"1644213886" modified:"1644299050" project:"domino" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"e674f4df-5af1-499b-91b4-4d21e178b483"]
 [description:"recurring" due:"1646024400" entry:"1644280331" mask:"X" modified:"1644280806" recur:"monthly" rtype:"periodic" status:"recurring" uuid:"b515f29a-e85a-4717-af80-6260ba3c38e9"]
 [description:"connect FLASK backend to google sql table" entry:"1644290980" modified:"1644299016" project:"avery" status:"pending" tags:"i,p" tags_i:"x" tags_p:"x" uuid:"3bdc201a-8256-4930-b8fe-677cff19b52f"]
 [description:"reassess goals\/habits\/inbox" entry:"1644298980" modified:"1644298997" project:"self" status:"pending" tags:"i,p" tags_i:"x" tags_p:"x" uuid:"85a7089a-d13e-4042-85fa-8edc61926ffc"]
-[description:"write product kickoff doc" due:"1644382799" entry:"1644348772" modified:"1644348782" project:"domino" start:"1644348775" status:"pending" tags:"iu,next,w" tags_iu:"x" tags_next:"x" tags_w:"x" uuid:"89371e78-2908-44dc-a013-7353761aa857"]
