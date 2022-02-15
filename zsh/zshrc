@@ -269,6 +269,14 @@ alias cuser='cd ~/src/retail/retail && bundle exec rake create_user'
 alias retailupdate='cd ~/src/retail/retail && ./script/setup.sh'
 alias debug="RUBY_DEBUG_PORT=1234 rails s -p 3001 -P debug.pid -b 'retail.test'"
 alias webpack="cd ~/src/retail/retail && ./bin/webpack-dev-server"
+alias bxr="bundle exec rspec $1"
+openpr() {
+  local BRANCH_NAME URL
+  BRANCH_NAME=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+  URL="https://github.com/Betterment/retail/compare/${BRANCH_NAME}?expand=1"
+  open $URL
+}
+
 
 ################
 # blocksize    #
