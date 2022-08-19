@@ -7,7 +7,7 @@ set nocompatible
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set whichwrap+=<,>,h,l
-set history=1000                "Store lots of :cmdline history
+set history=10000               "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
@@ -77,10 +77,15 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
 " Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" if filereadable(expand("~/.vim/vundles.vim"))
+"   source ~/.vim/vundles.vim
+" endif
+" au BufNewFile,BufRead *.vundle set filetype=vim
+
+" =============== Vundle Initialization ===============
+if filereadable(expand("~/.vim/plugins.vim"))
+  source ~/.vim/plugins.vim
 endif
-au BufNewFile,BufRead *.vundle set filetype=vim
 
 " ================ Turn Off Swap Files ==============
 

@@ -136,5 +136,5 @@
   name = Jeff Park
   email = jypark03@gmail.com
 [init]
-	templatedir = /Users/jeffreypark/.git-templates
+	templatedir = ~/.jp_setup/git/git-templates
 	defaultBranch = main

@@ -58,10 +58,10 @@ alias lsg='ll | grep'
 alias :q='exit'
 
 # vimrc editing
-alias ve='vim ~/.vimrc'
+alias ve='nvim ~/.vimrc'
 
 # zsh profile editing
-alias ze='vim ~/.zshrc'
+alias ze='nvim ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # Git Aliases
@@ -71,7 +71,7 @@ alias gst='git stash'
 alias gsp='git stash pop'
 alias gsa='git stash apply'
 alias gsh='git show'
-alias gi='vim .gitignore'
+alias gi='nvim .gitignore'
 alias gcm='git commit -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -198,7 +198,7 @@ alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias v="vim ."
+alias v="nvim ."
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -464,8 +464,8 @@ promptinit
 # vi mode      #
 ################
 set -o vi
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 ################
 # zmv          #
