@@ -197,6 +197,7 @@ alias la='ls -FGlAhp'                       # Backup preferred 'ls' implementati
 alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias v="vim ."
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
@@ -322,7 +323,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/opt/homebrew/Cellar/fzf/0.29.0/shell/key-bindings.zsh"
 
 ################
 # git          #
