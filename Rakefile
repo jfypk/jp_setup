@@ -226,6 +226,7 @@ def install_nvim
   puts "symlinking neovim"
 
   run %{ ln -nfs "$HOME/.jp_setup/nvim" "$HOME/.local/share" }
+  run %{ ln -nfs "$HOME/.jp_setup/nvim/config" "$HOME/.config/nvim" }
 end
 
 def install_prezto

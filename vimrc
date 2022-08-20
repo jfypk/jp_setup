@@ -251,6 +251,9 @@ let NERDTreeShowHidden=1
 " autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
 "     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 " ag
 "========================================
 " Open the Ag command and place the cursor into the quotes
@@ -327,6 +330,11 @@ nmap ,<S-ESC> ,,b
 cnoreabbrev fzf FZF
 nnoremap <silent> ,t :FZF<cr>
 nnoremap <silent> ,,t :CocCommand fzf-preview.ProjectFiles<cr>
+
+"Telescope
+"========================================
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap ,bt <cmd>Telescope buffers<cr>
 
 "gh-markdown
 "========================================

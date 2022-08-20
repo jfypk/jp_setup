@@ -80,9 +80,11 @@ Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'xolox/vim-misc'
-Plug 'ryanoasis/vim-devicons'
-Plug 'jlanzarotta/bufexplorer'
+Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'jlanzarotta/bufexplorer' "replaced with telescope
 Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " ============= Languages ================
 Plug 'sheerun/vim-polyglot'
