@@ -73,42 +73,6 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 scriptencoding utf-8
 
-" This function originates from https://www.reddit.com/r/neovim/comments/eq1xpt/how_open_help_in_floating_windows/; it isn't mine
-function! CreateCenteredFloatingWindow() abort
-    let width = min([&columns - 4, max([80, &columns - 20])])
-    let height = min([&lines - 4, max([20, &lines - 10])])
-    let top = ((&lines - height) / 2) - 1
-    let left = (&columns - width) / 2
-    let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
-
-    let top = "╭" . repeat("─", width - 2) . "╮"
-    let mid = "│" . repeat(" ", width - 2) . "│"
-    let bot = "╰" . repeat("─", width - 2) . "╯"
-    let lines = [top] + repeat([mid], height - 2) + [bot]
-    let s:buf = nvim_create_buf(v:false, v:true)
-    call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
-    call nvim_open_win(s:buf, v:true, opts)
-    set winhl=Normal:Floating
-    let opts.row += 1
-    let opts.height -= 2
-    let opts.col += 2
-    let opts.width -= 4
-    let l:textbuf = nvim_create_buf(v:false, v:true)
-    call nvim_open_win(l:textbuf, v:true, opts)
-    au BufWipeout <buffer> exe 'bw '.s:buf
-    return l:textbuf
-endfunction
-
-function! FloatingWindowHelp(query) abort
-    let l:buf = CreateCenteredFloatingWindow()
-    call nvim_set_current_buf(l:buf)
-    setlocal filetype=help
-    setlocal buftype=help
-    execute 'help ' . a:query
-endfunction
-
-command! -complete=help -nargs=? Help call FloatingWindowHelp(<q-args>)
-
 " =============== Plug Vim Initialization ===============
 if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
@@ -315,20 +279,20 @@ sunmap E
 " " Use tab for trigger completion with characters ahead and navigate.
 " " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " " other plugin before putting this into your config.
-" inoremap <silent><expr> ,<TAB>
+" inoremap <silent><expr> <TAB>
 "       \ pumvisible() ? "\<C-n>" :
 "       \ <SID>check_back_space() ? "\<TAB>" :
 "       \ coc#refresh()
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" "
+"
 " function! s:check_back_space() abort
 "   let col = col('.') - 1
 "   return !col || getline('.')[col - 1]  =~# '\s'
 " endfunction
-"
-" " Make <CR> auto-select the first completion item and notify coc.nvim to
-" " format on enter, <cr> could be remapped by other vim plugin
-" inoremap <silent><expr> <C-r> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+" inoremap <silent><expr> <C-j> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -362,7 +326,7 @@ nmap ,<S-ESC> ,,b
 "========================================
 cnoreabbrev fzf FZF
 nnoremap <silent> ,t :FZF<cr>
-nnoremap <silent> ,,t :GFiles<cr>
+nnoremap <silent> ,,t :CocCommand fzf-preview.ProjectFiles<cr>
 
 "gh-markdown
 "========================================
@@ -449,6 +413,12 @@ endfunction
 " Use status bar even with single buffer
 set laststatus=2
 
+"Octo
+"========================================
+" if filereadable(expand("~/.vim/octo.vim"))
+"   source ~/.vim/octo.vim
+" endif
+
 "Path
 "========================================
 " Set the shell to bash so we inherit its path, to make sure
@@ -494,12 +464,12 @@ nmap ,w :StripTrailingWhitespaces<CR>
 
 "Smart Jump To Tag
 "========================================
-" hit ,f to find the definition of the current class
+" hit ,j to find the definition of the current class
 " this uses ctags. the standard way to get this is Ctrl-]
-nnoremap <silent> ,f <C-]>
+nnoremap <silent> ,j <C-]>
 
-" use ,F to jump to tag in a vertical split
-nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+" use ,J to jump to tag in a vertical split
+nnoremap <silent> ,J :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
 "Sneak
 "========================================
@@ -690,9 +660,6 @@ vmap ,{ c{<C-R>"}<ESC>
 
 map ,` ysiw`
 
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
-
 "Go to last edit location with ,.
 nnoremap ,. '.
 
@@ -714,8 +681,11 @@ set showcmd
 "Return to last edit postiion when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-
 colorscheme dracula
+" colorscheme sonokai
+" let g:sonokai_style = 'atlantis'
+" let g:sonokai_better_performance = 1
+
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 set background=dark
