@@ -240,9 +240,6 @@ let NERDTreeAutoDeleteBuffer = 1
 " show hidden files
 let NERDTreeShowHidden=1
 
-" Start NERDTree and put the cursor back in the other window.
-" autocmd VimEnter * NERDTree | wincmd p
-
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
@@ -333,7 +330,7 @@ nnoremap <silent> ,,t :CocCommand fzf-preview.ProjectFiles<cr>
 
 "Telescope
 "========================================
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap ,ff <cmd>Telescope find_files<cr>
 nnoremap ,bt <cmd>Telescope buffers<cr>
 
 "gh-markdown
