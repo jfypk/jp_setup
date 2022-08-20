@@ -301,7 +301,8 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 fi
 
 if type ag &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+  # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'
+  export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 fi
 
 fco() {

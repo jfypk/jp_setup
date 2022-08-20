@@ -29,8 +29,6 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
 let mapleader=","
 let g:snipMate = { 'snippet_version' : 1 }
 set mouse=a
@@ -53,7 +51,7 @@ set guioptions-=L
 " Disable the macvim toolbar
 set guioptions-=T
 
-" Use Q to intelligently close a window 
+" Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
 function! CloseWindowOrKillBuffer()
@@ -74,15 +72,7 @@ endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-" if filereadable(expand("~/.vim/vundles.vim"))
-"   source ~/.vim/vundles.vim
-" endif
-" au BufNewFile,BufRead *.vundle set filetype=vim
-
-" =============== Vundle Initialization ===============
+" =============== Plug Vim Initialization ===============
 if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
 endif
@@ -196,7 +186,7 @@ function! GetVisual()
   return selection
 endfunction
 
-"grep the current word using ,k (mnemonic Kurrent) 
+"grep the current word using ,k (mnemonic Kurrent)
 "(TODO: ignore certain directories)
 nnoremap <silent> ,k :Ag <cword><CR>
 
@@ -227,18 +217,34 @@ endif
 set modelines=0
 set nomodeline
 
-" ================ Abbreviations =====================
-abbr cl! console.log( )<left><left>
-
 " ================ PLUGINS ==========================
 " NERDTREE
 "========================================
+" Cmd-Shift-N for nerd tree
+nmap ,,N :NERDTreeFind<CR>
+
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinSize = 30
+let g:NERDTreeWinSize = 25
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
+
+" auto close nerdtree if it's the only window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" auto delete buffer of file you just deleted in nerdtree
+let NERDTreeAutoDeleteBuffer = 1
+
+" show hidden files
+let NERDTreeShowHidden=1
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+" autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+"     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " ag
 "========================================
@@ -262,16 +268,13 @@ sunmap W
 sunmap B
 sunmap E
 
-"TODO: Deoplete (need neoplete...)
-"========================================
-
 "Easymotion
 "========================================
 " These keys are easier to type than the default set
 " We exclude semicolon because it's hard to read and
 " i and l are too easy to mistake for each other slowing
 " down recognition. The home keys and the immediate keys
-" accessible by middle fingers are available 
+" accessible by middle fingers are available
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
@@ -281,7 +284,6 @@ nmap ,<S-ESC> ,,b
 cnoreabbrev fzf FZF
 nnoremap <silent> ,t :FZF<cr>
 nnoremap <silent> ,,t :GFiles<cr>
-let g:fzf_layout = { 'down' : '30%' }
 
 "gh-markdown
 "========================================
@@ -320,16 +322,6 @@ let g:limelight_conceal_ctermfg = 'gray'
 "For fugitive.git, dp means :diffput. Define dg to mean :diffget
 nnoremap <silent> ,dg :diffget<CR>
 nnoremap <silent> ,dp :diffput<CR>
-
-"Gundo
-"========================================
-nmap ,u :GundoToggle<CR>
-
-" open on the right so as not to compete with the nerdtree
-let g:gundo_right = 1 
-
-" a little wider for wider screens
-let g:gundo_width = 60
 
 "Lightline
 "========================================
@@ -430,11 +422,15 @@ nnoremap <silent> ,f <C-]>
 " use ,F to jump to tag in a vertical split
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
-"Sneak (TODO: probably needs more commands)
+"Sneak
 "========================================
+" <space><char><char> to go to next occurrence of those characters.
+" ; to go to next match
+" 3; to go to third match from current position.
+" ctrl-o to go to beginning
 nmap <Space> <Plug>SneakForward
 
-"Syntastic
+"Syntasttic
 "========================================
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -478,9 +474,6 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-"Multiple cursors...
-"========================================
-
 "vim-tmux-navigator
 "========================================
 " Don't allow any default key-mappings.
@@ -494,14 +487,10 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
-"vim-tmux-navigator
-"========================================
-
 "yankring
 "========================================
 let g:yankring_history_file = '.yankring-history'
 nnoremap ,yr :YRShow<CR>
-
 
 " ========================================
 " Mac specific General vim sanity improvements
@@ -525,10 +514,6 @@ nnoremap ,,( f(ci(
 nnoremap ,,) f)ci)
 nnoremap ,,[ f[ci[
 nnoremap ,,] f]ci]
-
-" ==== NERD tree
-" Cmd-Shift-N for nerd tree
-nmap ,,N :NERDTreeFind<CR>
 
 " move up/down quickly by using Cmd-j, Cmd-k
 " which will move us around by functions
@@ -571,8 +556,6 @@ map ,,% :so %<CR>
 " ========================================
 " General vim sanity improvements
 " ========================================
-"
-"
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
