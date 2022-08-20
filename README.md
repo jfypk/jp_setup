@@ -25,4 +25,6 @@ Then run:
 #TODO
 - add cask/barrel
 - add htop
+- remove tags and replace with CoC
+- add octo
 
