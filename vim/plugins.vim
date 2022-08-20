@@ -100,7 +100,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'dense-analysis/ale'
 
 " ================== Git ================
@@ -110,6 +110,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'ruanyl/vim-gh-line'
+" Plug 'pwntester/octo.nvim'
 
 " ============= Appearance ===============
 Plug 'chrisbra/color_highlight'
