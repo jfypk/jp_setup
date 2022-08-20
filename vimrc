@@ -30,7 +30,6 @@ syntax on
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 let mapleader=","
-let g:snipMate = { 'snippet_version' : 1 }
 set mouse=a
 
 " w!! to write a file as sudo
@@ -71,6 +70,44 @@ function! CloseWindowOrKillBuffer()
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+
+scriptencoding utf-8
+
+" This function originates from https://www.reddit.com/r/neovim/comments/eq1xpt/how_open_help_in_floating_windows/; it isn't mine
+function! CreateCenteredFloatingWindow() abort
+    let width = min([&columns - 4, max([80, &columns - 20])])
+    let height = min([&lines - 4, max([20, &lines - 10])])
+    let top = ((&lines - height) / 2) - 1
+    let left = (&columns - width) / 2
+    let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
+
+    let top = "╭" . repeat("─", width - 2) . "╮"
+    let mid = "│" . repeat(" ", width - 2) . "│"
+    let bot = "╰" . repeat("─", width - 2) . "╯"
+    let lines = [top] + repeat([mid], height - 2) + [bot]
+    let s:buf = nvim_create_buf(v:false, v:true)
+    call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
+    call nvim_open_win(s:buf, v:true, opts)
+    set winhl=Normal:Floating
+    let opts.row += 1
+    let opts.height -= 2
+    let opts.col += 2
+    let opts.width -= 4
+    let l:textbuf = nvim_create_buf(v:false, v:true)
+    call nvim_open_win(l:textbuf, v:true, opts)
+    au BufWipeout <buffer> exe 'bw '.s:buf
+    return l:textbuf
+endfunction
+
+function! FloatingWindowHelp(query) abort
+    let l:buf = CreateCenteredFloatingWindow()
+    call nvim_set_current_buf(l:buf)
+    setlocal filetype=help
+    setlocal buftype=help
+    execute 'help ' . a:query
+endfunction
+
+command! -complete=help -nargs=? Help call FloatingWindowHelp(<q-args>)
 
 " =============== Plug Vim Initialization ===============
 if filereadable(expand("~/.vim/plugins.vim"))
@@ -262,7 +299,7 @@ nmap ,af :AgFile ""<Left>
 let g:auto_ctags = 1
 let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
 
-"CamelCaseMotion
+" CamelCaseMotion
 "========================================
 map W <Plug>CamelCaseMotion_w
 map B <Plug>CamelCaseMotion_b
@@ -271,6 +308,44 @@ map E <Plug>CamelCaseMotion_e
 sunmap W
 sunmap B
 sunmap E
+
+""""""""""""""
+" CoC Config
+""""""""""""""
+" " Use tab for trigger completion with characters ahead and navigate.
+" " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" " other plugin before putting this into your config.
+" inoremap <silent><expr> ,<TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" "
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+"
+" " Make <CR> auto-select the first completion item and notify coc.nvim to
+" " format on enter, <cr> could be remapped by other vim plugin
+" inoremap <silent><expr> <C-r> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Use " Use CocDiagnosticsto get all diagnostics of current buffer in location list.
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "Easymotion
 "========================================

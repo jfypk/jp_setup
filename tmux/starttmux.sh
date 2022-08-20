@@ -22,8 +22,8 @@ then
 
   # return to main vim window
   tmux select-window -t 'editor'
+  tmux selectp -t 1
 
   # Finished setup, attach to the tmux session!
   tmux attach-session -t $session
 fi
-

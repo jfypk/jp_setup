@@ -86,7 +86,6 @@ Plug 'github/copilot.vim'
 
 " ============= Languages ================
 Plug 'sheerun/vim-polyglot'
-Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'vim-syntastic/syntastic'
