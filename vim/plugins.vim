@@ -81,10 +81,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'xolox/vim-misc'
 Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'jlanzarotta/bufexplorer' "replaced with telescope
+Plug 'jlanzarotta/bufexplorer' "replaced with telescope
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " ============= Languages ================
 Plug 'sheerun/vim-polyglot'
@@ -111,6 +110,7 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'ruanyl/vim-gh-line'
 " Plug 'pwntester/octo.nvim'
+Plug 'github/copilot.vim'
 
 " ============= Appearance ===============
 Plug 'chrisbra/color_highlight'

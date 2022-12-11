@@ -132,6 +132,7 @@
   path = .gitconfig.user
 [credential]
 	helper = osxkeychain
+  username = jfypk
 [user]
   name = Jeff Park
   email = jypark03@gmail.com
