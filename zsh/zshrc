@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$(pyenv root)/shims:$PATH
+export PATH=/Users/jeffpark/bin:/usr/local/bin:$PATH
+export PATH="/Users/jeffpark/.local/bin:$PATH"
+#PATH=$(pyenv root)/shims:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.jp_setup/zsh/zsh/ohmyzsh"
@@ -58,10 +59,10 @@ alias lsg='ll | grep'
 alias :q='exit'
 
 # vimrc editing
-alias ve='nvim ~/.vimrc'
+alias ve='v ~/.vimrc'
 
 # zsh profile editing
-alias ze='nvim ~/.zshrc'
+alias ze='v ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # Git Aliases
@@ -71,7 +72,7 @@ alias gst='git stash'
 alias gsp='git stash pop'
 alias gsa='git stash apply'
 alias gsh='git show'
-alias gi='nvim .gitignore'
+alias gi='v .gitignore'
 alias gcm='git commit -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -318,7 +319,7 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 fi
 
 if type ag &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore-dir=public -f -g ""'
   # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 fi
 
@@ -341,7 +342,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/Users/jeffpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
 
 ################
 # git          #
@@ -482,8 +483,8 @@ promptinit
 # vi mode      #
 ################
 set -o vi
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=lvim
+export VISUAL=lvim
 
 ################
 # zmv          #

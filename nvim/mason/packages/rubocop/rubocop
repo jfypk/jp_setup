@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export GEM_PATH="/Users/jeffpark/.local/share/nvim/mason/packages/rubocop:$GEM_PATH"
+exec /Users/jeffpark/.local/share/nvim/mason/packages/rubocop/bin/rubocop "$@"

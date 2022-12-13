@@ -7,12 +7,6 @@ then
   # create a new tmux session, starting a new vim session
   tmux new-session -d -s $session -n editor
   tmux send-keys "v" C-m
-  tmux splitw -v -p 10
-  tmux send-keys "retail" C-m \;
-  tmux send-keys "c" C-m
-  tmux splitw -h -p 50
-  tmux send-keys "retail" C-m \;
-  tmux send-keys "c" C-m
 
   tmux new-window -n 'tests'
   tmux send-keys "retail" C-m \;

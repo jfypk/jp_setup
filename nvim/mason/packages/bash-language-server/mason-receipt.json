@@ -1,0 +1,1 @@
+{"secondary_sources":[],"schema_version":"1.0","primary_source":{"package":"bash-language-server","type":"npm"},"links":{"bin":{"bash-language-server":"node_modules\/.bin\/bash-language-server"}},"metrics":{"completion_time":1670909715493,"start_time":1670909712112},"name":"bash-language-server"}
