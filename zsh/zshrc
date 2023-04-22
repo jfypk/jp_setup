@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-export PATH=/Users/jeffpark/bin:/usr/local/bin:$PATH
-export PATH="/Users/jeffpark/.local/bin:$PATH"
+export PATH=/Users/jpark/bin:/usr/local/bin:$PATH
+export PATH="/Users/jpark/.local/bin:$PATH"
 #PATH=$(pyenv root)/shims:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -200,7 +200,7 @@ alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias v="/Users/jeffpark/.local/bin/lvim"
+alias v="/Users/jpark/.local/bin/lvim"
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -342,7 +342,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/Users/jeffpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
+source "/Users/jpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
 
 ################
 # git          #
@@ -505,5 +505,3 @@ if [ -f '/Users/jpark/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jpark/goo
 if [ -f '/Users/jpark/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jpark/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-source "$HOME/.bootstrap/env.sh"
