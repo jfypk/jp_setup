@@ -11,6 +11,6 @@ vim/.vundles.local
 vim/.vundles.local.bak
 vim/bundle
 vim/sessions
-.netrwhist
 bin/subl
+nvim/telescope_history
 tags

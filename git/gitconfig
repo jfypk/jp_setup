@@ -132,9 +132,10 @@
   path = .gitconfig.user
 [credential]
 	helper = osxkeychain
+  username = jfypk
 [user]
   name = Jeff Park
   email = jypark03@gmail.com
 [init]
-	templatedir = ~/.jp_setup/git/git-templates
+	templatedir = /Users/jeffpark/.git-templates
 	defaultBranch = main

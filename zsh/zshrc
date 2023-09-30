@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$(pyenv root)/shims:$PATH
+export PATH=/Users/jpark/bin:/usr/local/bin:$PATH
+export PATH="/Users/jpark/.local/bin:$PATH"
+#PATH=$(pyenv root)/shims:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.jp_setup/zsh/zsh/ohmyzsh"
@@ -58,10 +59,10 @@ alias lsg='ll | grep'
 alias :q='exit'
 
 # vimrc editing
-alias ve='nvim ~/.vimrc'
+alias ve='v ~/.vimrc'
 
 # zsh profile editing
-alias ze='nvim ~/.zshrc'
+alias ze='v ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # Git Aliases
@@ -71,7 +72,7 @@ alias gst='git stash'
 alias gsp='git stash pop'
 alias gsa='git stash apply'
 alias gsh='git show'
-alias gi='nvim .gitignore'
+alias gi='v .gitignore'
 alias gcm='git commit -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -119,6 +120,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gbd='git branch -d $1'
 
 # Common shell functions
 alias less='less -r'
@@ -198,7 +200,7 @@ alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias v="nvim"
+alias v="/Users/jpark/.local/bin/lvim"
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -261,6 +263,22 @@ ii() {
     echo
 }
 
+#Betterment specific
+alias retail='cd ~/src/retail'
+alias stylecloset='cd ~/src/style-closet'
+alias cuser='cd ~/src/retail/retail && bundle exec rake create_user'
+alias retailupdate='cd ~/src/retail/retail && ./script/setup.sh'
+alias debug="RUBY_DEBUG_PORT=1234 rails s -p 3001 -P debug.pid -b 'retail.test'"
+alias webpack="cd ~/src/retail/retail && ./bin/webpack-dev-server"
+alias bxr="bundle exec rspec $1"
+openpr() {
+  local BRANCH_NAME URL
+  BRANCH_NAME=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+  URL="https://github.com/Betterment/retail/compare/${BRANCH_NAME}?expand=1"
+  open $URL
+}
+
+
 ################
 # blocksize    #
 ################
@@ -301,8 +319,8 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 fi
 
 if type ag &> /dev/null; then
-  # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'
-  export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore-dir=public -f -g ""'
+  # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 fi
 
 fco() {
@@ -324,7 +342,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/opt/homebrew/Cellar/fzf/0.29.0/shell/key-bindings.zsh"
+source "/Users/jpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
 
 ################
 # git          #
@@ -465,8 +483,8 @@ promptinit
 # vi mode      #
 ################
 set -o vi
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=lvim
+export VISUAL=lvim
 
 ################
 # zmv          #
@@ -485,3 +503,21 @@ if [ -f '/Users/jpark/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jpark/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jpark/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jpark/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

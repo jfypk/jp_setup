@@ -1,0 +1,270 @@
+[03:31:56.657][info] [#0:/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:66]: Lua Lsp startup, root: 	/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server
+[03:31:56.658][info] [#0:/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:67]: ROOT:	/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server
+[03:31:56.658][info] [#0:/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:68]: LOGPATH:	/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/log
+[03:31:56.658][info] [#0:/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:69]: METAPATH:	/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta
+[03:31:56.659][info] [#0:/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:70]: VERSION:	3.6.4-dev
+[03:31:56.685][info] [#0:script/service/service.lua:141]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 1.563 MB
+        # 00 : 1.563 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[03:31:56.690][info] [#0:script/language.lua:137]: VSC language: nil
+[03:31:56.690][info] [#0:script/language.lua:138]: LS  language: en-us
+[03:31:56.690][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///Users/jeffpark/.jp_setup
+[03:31:56.690][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/log/file_Users_jeffpark_.jp_setup.log
+[03:31:56.691][info] [#0:script/workspace/workspace.lua:51]: Workspace create: 	file:///Users/jeffpark/.jp_setup
+[03:31:56.798][info] [#0:script/provider/provider.lua:41]: Load config from client	file:///Users/jeffpark/.jp_setup
+[03:31:56.798][info] [#0:script/provider/provider.lua:42]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.798][info] [#0:script/provider/provider.lua:41]: Load config from client	file:///Users/jeffpark/.jp_setup
+[03:31:56.798][info] [#0:script/provider/provider.lua:42]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.798][info] [#0:script/provider/provider.lua:41]: Load config from client	file:///Users/jeffpark/.jp_setup
+[03:31:56.798][info] [#0:script/provider/provider.lua:42]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.799][info] [#0:script/provider/provider.lua:56]: Load config from client	fallback
+[03:31:56.799][info] [#0:script/provider/provider.lua:57]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.799][info] [#0:script/library.lua:209]: Init builtin library at:	file:///Users/jeffpark/.jp_setup
+[03:31:56.810][info] [#0:script/plugin.lua:86]: plugin path:	/Users/jeffpark/.jp_setup
+[03:31:56.810][warn] [#0:script/plugin.lua:101]: plugin not found:	/Users/jeffpark/.jp_setup
+[03:31:56.810][info] [#0:script/library.lua:209]: Init builtin library at:	nil
+[03:31:56.820][info] [#0:script/provider/provider.lua:56]: Load config from client	fallback
+[03:31:56.820][info] [#0:script/provider/provider.lua:57]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.820][info] [#0:script/provider/provider.lua:56]: Load config from client	fallback
+[03:31:56.821][info] [#0:script/provider/provider.lua:57]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "packer_plugins", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      checkThirdParty = false,
+      library = { "/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime", "/Users/jeffpark/.local/share/lunarvim/lvim", "/Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua", "/Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[03:31:56.926][info] [#0:script/workspace/workspace.lua:304]: Preload start:	file:///Users/jeffpark/.jp_setup
+[03:31:56.928][info] [#0:script/workspace/workspace.lua:310]: Scan files at:	file:///Users/jeffpark/.jp_setup
+[03:31:56.929][info] [#0:script/workspace/workspace.lua:304]: Preload start:	<fallback>
+[03:31:56.930][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime
+[03:31:57.083][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta/LuaJIT%20en-us%20utf8
+[03:31:57.086][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable
+[03:31:57.088][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua
+[03:31:57.102][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua
+[03:31:57.109][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/lvim
+[03:31:57.135][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua
+[03:31:57.247][info] [#0:script/workspace/workspace.lua:347]: Found 354 files at:	<fallback>
+[03:31:57.247][info] [#0:script/workspace/loading.lua:157]: Load files from disk:	<fallback>
+[03:31:58.297][info] [#0:script/workspace/loading.lua:169]: Loaded files takes [1.042] sec: <fallback>
+[03:31:58.314][info] [#0:script/workspace/loading.lua:178]: Compile files takes [0.000] sec: <fallback>
+[03:31:58.314][info] [#0:script/workspace/loading.lua:179]: Loaded finish:	<fallback>
+[03:31:58.314][info] [#0:script/workspace/workspace.lua:349]: Preload finish at:	<fallback>
+[03:31:58.397][warn] [#0:script/proto/proto.lua:122]: Response of [workspace/diagnostic/refresh] error [-32601]: MethodNotFound
+[03:31:59.516][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime
+[03:31:59.553][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta/LuaJIT%20en-us%20utf8
+[03:31:59.556][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/opt/neodev.nvim/types/stable
+[03:31:59.557][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/telescope.nvim/lua
+[03:31:59.571][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/LuaSnip/lua
+[03:31:59.580][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/lvim
+[03:31:59.597][info] [#0:script/workspace/workspace.lua:327]: Scan library at:	file:///Users/jeffpark/.local/share/lunarvim/site/pack/packer/start/plenary.nvim/lua
+[03:31:59.707][info] [#0:script/workspace/workspace.lua:347]: Found 3442 files at:	file:///Users/jeffpark/.jp_setup
+[03:31:59.707][info] [#0:script/workspace/loading.lua:157]: Load files from disk:	file:///Users/jeffpark/.jp_setup
+[03:31:59.847][warn] [#0:script/files.lua:683]: Compile [file:///Users/jeffpark/.jp_setup/nvim/mason/packages/lua-language-server/extension/server/locale/pt-br/script.lua] takes [0.107] sec, size [36.883] kb.
+[03:32:00.329][warn] [#0:script/files.lua:683]: Compile [file:///Users/jeffpark/.jp_setup/nvim/mason/packages/lua-language-server/extension/server/meta/3rd/Cocos4.0/library/cc/Manifest.lua] takes [0.101] sec, size [0.856] kb.
+[03:32:00.727][warn] [#0:script/proto/proto.lua:171]: Method [textDocument/documentHighlight] takes [0.717]sec. {
+  _closeMessage = "Request cancelled.",
+  _closeReason = -32800,
+  id = 21,
+  jsonrpc = "2.0",
+  method = "textDocument/documentHighlight",
+  params = {
+    position = {
+      character = 0,
+      line = 19
+    },
+    textDocument = {
+      uri = "file:///Users/jeffpark/.jp_setup/lunarvim/config/config.lua"
+    }
+  }
+}
+[03:32:01.072][warn] [#0:script/files.lua:683]: Compile [file:///Users/jeffpark/.jp_setup/nvim/mason/packages/lua-language-server/extension/server/script/inspect.lua] takes [0.153] sec, size [8.470] kb.
+[03:32:02.317][warn] [#0:script/files.lua:683]: Compile [file:///Users/jeffpark/.jp_setup/lunarvim/site/pack/packer/start/null-ls.nvim/lua/null-ls/builtins/_meta/diagnostics.lua] takes [0.218] sec, size [5.102] kb.
+[03:32:04.026][warn] [#0:script/proto/proto.lua:171]: Method [textDocument/documentHighlight] takes [0.933]sec. {
+  _closeMessage = "Request cancelled.",
+  _closeReason = -32800,
+  id = 73,
+  jsonrpc = "2.0",
+  method = "textDocument/documentHighlight",
+  params = {
+    position = {
+      character = 0,
+      line = 71
+    },
+    textDocument = {
+      uri = "file:///Users/jeffpark/.jp_setup/lunarvim/config/config.lua"
+    }
+  }
+}
+[03:32:04.545][info] [#0:script/workspace/loading.lua:169]: Loaded files takes [4.789] sec: file:///Users/jeffpark/.jp_setup
+[03:32:04.545][info] [#0:script/workspace/loading.lua:178]: Compile files takes [0.000] sec: file:///Users/jeffpark/.jp_setup
+[03:32:04.545][info] [#0:script/workspace/loading.lua:179]: Loaded finish:	file:///Users/jeffpark/.jp_setup
+[03:32:04.545][info] [#0:script/workspace/workspace.lua:349]: Preload finish at:	file:///Users/jeffpark/.jp_setup
+[03:32:05.342][warn] [#0:script/proto/proto.lua:171]: Method [textDocument/documentHighlight] takes [0.803]sec. {
+  _closeMessage = "Request cancelled.",
+  _closeReason = -32800,
+  id = 87,
+  jsonrpc = "2.0",
+  method = "textDocument/documentHighlight",
+  params = {
+    position = {
+      character = 0,
+      line = 85
+    },
+    textDocument = {
+      uri = "file:///Users/jeffpark/.jp_setup/lunarvim/config/config.lua"
+    }
+  }
+}
+[03:32:05.348][warn] [#0:script/proto/proto.lua:122]: Response of [workspace/diagnostic/refresh] error [-32601]: MethodNotFound
+[03:32:05.353][info] [#0:script/provider/diagnostic.lua:552]: Diagnostics scope [file:///Users/jeffpark/.jp_setup], files count:[3415]
+[03:32:05.426][warn] [#0:script/proto/proto.lua:171]: Method [textDocument/documentSymbol] takes [8.070]sec. {
+  id = 2,
+  jsonrpc = "2.0",
+  method = "textDocument/documentSymbol",
+  params = {
+    textDocument = {
+      uri = "file:///Users/jeffpark/.jp_setup/lunarvim/config/config.lua"
+    }
+  }
+}
+[03:32:09.371][info] [#0:script/provider/provider.lua:170]: Server shutdown.
+[03:32:09.387][info] [#0:script/provider/provider.lua:163]: Server exited.

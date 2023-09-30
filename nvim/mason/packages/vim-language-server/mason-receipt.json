@@ -1,0 +1,1 @@
+{"metrics":{"completion_time":1670796803171,"start_time":1670796800869},"links":{"bin":{"vim-language-server":"node_modules\/.bin\/vim-language-server"}},"secondary_sources":[],"schema_version":"1.0","primary_source":{"package":"vim-language-server","type":"npm"},"name":"vim-language-server"}
