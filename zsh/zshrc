@@ -263,13 +263,6 @@ ii() {
     echo
 }
 
-# openpr() {
-#   local BRANCH_NAME URL
-#   BRANCH_NAME=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
-#   URL="https://github.com/Betterment/retail/compare/${BRANCH_NAME}?expand=1"
-#   open $URL
-# }
-
 openpr() {
   local BRANCH_NAME URL REPO_NAME OWNER
 
