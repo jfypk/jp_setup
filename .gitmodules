@@ -8,6 +8,11 @@
 	url = https://github.com/ohmyzsh/ohmyzsh
   ignore = dirty
 
+[submodule "zsh/zsh/ohmyzsh"]
+	path = zsh/zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+  ignore = dirty
+
 [submodule "zsh-users/zsh-autosuggestions"]
 	path = zsh-users/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
@@ -16,4 +21,709 @@
 [submodule "zsh-users/zsh-syntax-highlighting"]
 	path = zsh-users/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+  ignore = dirty
+
+[submodule "lunarVim/lvim"]
+	path = lunarvim/lvim
+	url = https://github.com/LunarVim/LunarVim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/Comment.nvim"]
+	path = lunarvim/site/pack/packer/opt/Comment.nvim
+	url = https://github.com/numToStr/Comment.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/bufferline.nvim"]
+	path = lunarvim/site/pack/packer/opt/bufferline.nvim
+	url = https://github.com/akinsho/bufferline.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/gitsigns.nvim"]
+	path = lunarvim/site/pack/packer/opt/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/nvim-ts-context-commentstring"]
+	path = lunarvim/site/pack/packer/opt/nvim-ts-context-commentstring 
+	url = https://github.com/JoosepAlviste/nvim-ts-context-commentstring
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/toggleterm.nvim"]
+	path = lunarvim/site/pack/packer/opt/toggleterm.nvim
+	url = https://github.com/akinsho/toggleterm.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/neodev.nvim"]
+	path = lunarvim/site/pack/packer/opt/neodev.nvim
+	url = https://github.com/folke/neodev.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/trouble.nvim"]
+	path = lunarvim/site/pack/packer/opt/trouble.nvim
+	url = https://github.com/folke/trouble.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/opt/which-key.nvim"]
+	path = lunarvim/site/pack/packer/opt/which-key.nvim
+	url = https://github.com/folke/which-key.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/LuaSnip"]
+	path = lunarvim/site/pack/packer/start/LuaSnip
+	url = https://github.com/L3MON4D3/LuaSnip
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/cmp-buffer"]
+	path = lunarvim/site/pack/packer/start/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/cmp-nvim-lsp"]
+	path = lunarvim/site/pack/packer/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/alpha-nvim"]
+	path = lunarvim/site/pack/packer/start/alpha-nvim
+	url = https://github.com/goolord/alpha-nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/cmp-path"]
+	path = lunarvim/site/pack/packer/start/cmp-path
+	url = https://github.com/hrsh7th/cmp-path
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/cmp_luasnip"]
+	path = lunarvim/site/pack/packer/start/cmp_luasnip
+	url = https://github.com/saadparwaiz1/cmp_luasnip
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/hop.nvim"]
+	path = lunarvim/site/pack/packer/start/hop.nvim
+	url = https://github.com/hadronized/hop.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/friendly-snippets"]
+	path = lunarvim/site/pack/packer/start/friendly-snippets
+	url = https://github.com/rafamadriz/friendly-snippets
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/indent-blankline.nvim"]
+	path = lunarvim/site/pack/packer/start/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/lir.nvim"]
+	path = lunarvim/site/pack/packer/start/lir.nvim
+	url = https://github.com/tamago324/lir.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/lualine.nvim"]
+	path = lunarvim/site/pack/packer/start/lualine.nvim
+	url = https://github.com/nvim-lualine/lualine.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/lunar.nvim"]
+	path = lunarvim/site/pack/packer/start/lunar.nvim
+	url = https://github.com/LunarVim/lunar.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/mason-lspconfig.nvim"]
+	path = lunarvim/site/pack/packer/start/mason-lspconfig.nvim
+	url = https://github.com/williamboman/mason-lspconfig.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/mason.nvim"]
+	path = lunarvim/site/pack/packer/start/mason.nvim
+	url = https://github.com/williamboman/mason.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nlsp-settings.nvim"]
+	path = lunarvim/site/pack/packer/start/nlsp-settings.nvim
+	url = https://github.com/tamago324/nlsp-settings.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-autopairs"]
+	path = lunarvim/site/pack/packer/start/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/null-ls.nvim"]
+	path = lunarvim/site/pack/packer/start/null-ls.nvim
+	url = https://github.com/jfypk/null-ls.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-cmp"]
+	path = lunarvim/site/pack/packer/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-dap"]
+	path = lunarvim/site/pack/packer/start/nvim-dap
+	url = https://github.com/mfussenegger/nvim-dap
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-dap-ui"]
+	path = lunarvim/site/pack/packer/start/nvim-dap-ui
+	url = https://github.com/rcarriga/nvim-dap-ui
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-lspconfig"]
+	path = lunarvim/site/pack/packer/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-navic"]
+	path = lunarvim/site/pack/packer/start/nvim-navic
+	url = https://github.com/SmiteshP/nvim-navic
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-tree.lua"]
+	path = lunarvim/site/pack/packer/start/nvim-tree.lua
+	url = https://github.com/nvim-tree/nvim-tree.lua
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-treesitter"]
+	path = lunarvim/site/pack/packer/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/nvim-web-devicons"]
+	path = lunarvim/site/pack/packer/start/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/packer.nvim"]
+	path = lunarvim/site/pack/packer/start/packer.nvim
+	url = https://github.com/wbthomason/packer.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/plenary.nvim"]
+	path = lunarvim/site/pack/packer/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/popup.nvim"]
+	path = lunarvim/site/pack/packer/start/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/project.nvim"]
+	path = lunarvim/site/pack/packer/start/project.nvim
+	url = https://github.com/ahmedkhalf/project.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/schemastore.nvim"]
+	path = lunarvim/site/pack/packer/start/schemastore.nvim
+	url = https://github.com/b0o/SchemaStore.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/structlog.nvim"]
+	path = lunarvim/site/pack/packer/start/structlog.nvim
+	url = https://github.com/Tastyep/structlog.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/telescope-fzf-native.nvim"]
+	path = lunarvim/site/pack/packer/start/telescope-fzf-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/telescope.nvim"]
+	path = lunarvim/site/pack/packer/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/tokyonight.nvim"]
+	path = lunarvim/site/pack/packer/start/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/vim-illuminate"]
+	path = lunarvim/site/pack/packer/start/vim-illuminate
+	url = https://github.com/RRethy/vim-illuminate
+  ignore = dirty
+
+[submodule "lunarvim/site/pack/packer/start/vim-rooter"]
+	path = lunarvim/site/pack/packer/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+  ignore = dirty
+
+[submodule "vim/plugged/AnsiEsc.vim"]
+	path = vim/plugged/AnsiEsc.vim
+	url = https://github.com/vim-scripts/AnsiEsc.vim
+  ignore = dirty
+
+[submodule "vim/plugged/Autotag"]
+	path = vim/plugged/AutoTag
+	url = https://github.com/craigemery/vim-autotag
+  ignore = dirty
+
+[submodule "vim/plugged/NrrwRgn"]
+	path = vim/plugged/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn
+  ignore = dirty
+
+[submodule "vim/plugged/YankRing.vim"]
+	path = vim/plugged/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim
+  ignore = dirty
+
+[submodule "vim/plugged/ag.vim"]
+	path = vim/plugged/ag.vim
+	url = https://github.com/rking/ag.vim
+  ignore = dirty
+
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = https://github.com/dense-analysis/ale
+  ignore = dirty
+
+[submodule "vim/plugged/auto-ctags.vim"]
+	path = vim/plugged/auto-ctags.vim
+	url = https://github.com/soramugi/auto-ctags.vim
+  ignore = dirty
+
+[submodule "vim/plugged/base16-vim"]
+	path = vim/plugged/base16-vim
+	url = https://github.com/chriskempson/base16-vim
+  ignore = dirty
+
+[submodule "vim/plugged/bufexplorer"]
+	path = vim/plugged/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer
+  ignore = dirty
+
+[submodule "vim/plugged/camelcasemotion"]
+	path = vim/plugged/camelcasemotion
+	url = https://github.com/bkad/CamelCaseMotion
+  ignore = dirty
+
+[submodule "vim/plugged/change-inside-surroundings.vim"]
+	path = vim/plugged/change-inside-surroundings.vim
+	url = https://github.com/briandoll/change-inside-surroundings.vim
+  ignore = dirty
+
+[submodule "vim/plugged/coc.nvim"]
+	path = vim/plugged/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+  ignore = dirty
+
+[submodule "vim/plugged/color_highlight"]
+	path = vim/plugged/color_highlight
+	url = https://github.com/steelsojka/color_highlight
+  ignore = dirty
+
+[submodule "vim/plugged/copilot"]
+	path = vim/plugged/copilot.vim
+	url = https://github.com/github/copilot.vim
+  ignore = dirty
+
+[submodule "vim/plugged/csapprox"]
+	path = vim/plugged/csapprox
+	url = https://github.com/vim-scripts/CSApprox
+  ignore = dirty
+
+[submodule "vim/plugged/ctrlp-cmatcher"]
+	path = vim/plugged/ctrlp-cmatcher
+	url = https://github.com/JazzCore/ctrlp-cmatcher
+  ignore = dirty
+
+[submodule "vim/plugged/ctrlr.vim"]
+	path = vim/plugged/ctrlr.vim
+	url = https://github.com/goldfeld/ctrlr.vim
+  ignore = dirty
+
+[submodule "vim/plugged/delimitmate"]
+	path = vim/plugged/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+  ignore = dirty
+
+[submodule "vim/plugged/editorconfig-vim"]
+	path = vim/plugged/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
+  ignore = dirty
+
+[submodule "vim/plugged/file-line"]
+	path = vim/plugged/file-line
+	url = https://github.com/bogado/file-line
+  ignore = dirty
+
+[submodule "vim/plugged/fzf"]
+	path = vim/plugged/fzf
+	url = https://github.com/junegunn/fzf.vim
+  ignore = dirty
+
+[submodule "vim/plugged/fzf.vim"]
+	path = vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+  ignore = dirty
+
+[submodule "vim/plugged/gist-vim.vim"]
+	path = vim/plugged/gist-vim
+	url = https://github.com/mattn/vim-gist
+  ignore = dirty
+
+[submodule "vim/plugged/gitv"]
+	path = vim/plugged/gitv
+	url = https://github.com/gregsexton/gitv
+  ignore = dirty
+
+[submodule "vim/plugged/goyo"]
+	path = vim/plugged/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+  ignore = dirty
+
+[submodule "vim/plugged/greplace"]
+	path = vim/plugged/greplace.vim
+	url = https://github.com/skwp/greplace.vim
+  ignore = dirty
+
+[submodule "vim/plugged/gruvbox"]
+	path = vim/plugged/gruvbox
+	url = https://github.com/morhetz/gruvbox
+  ignore = dirty
+
+[submodule "vim/plugged/investigate.vim"]
+	path = vim/plugged/investigate.vim
+	url = https://github.com/keith/investigate.vim
+  ignore = dirty
+
+[submodule "vim/plugged/lastpos.vim"]
+	path = vim/plugged/lastpos.vim
+	url = https://github.com/vim-scripts/lastpos.vim
+  ignore = dirty
+
+[submodule "vim/plugged/lightline.vim"]
+	path = vim/plugged/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+  ignore = dirty
+
+[submodule "vim/plugged/limelight.vim"]
+	path = vim/plugged/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+  ignore = dirty
+
+[submodule "vim/plugged/matchit.zip"]
+	path = vim/plugged/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip/
+  ignore = dirty
+
+[submodule "vim/plugged/nerdtree"]
+	path = vim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree
+  ignore = dirty
+
+[submodule "vim/plugged/nvim-web-devicons"]
+	path = vim/plugged/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons
+  ignore = dirty
+
+[submodule "vim/plugged/plenary.nvim"]
+	path = vim/plugged/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+  ignore = dirty
+
+[submodule "vim/plugged/rspec.vim"]
+	path = vim/plugged/rspec.vim
+	url = https://github.com/keith/rspec.vim
+  ignore = dirty
+
+[submodule "vim/plugged/splitjoin.vim"]
+	path = vim/plugged/splitjoin.vim
+	url = https://github.com/bennypowers/splitjoin.nvim
+  ignore = dirty
+
+[submodule "vim/plugged/sudo.vim"]
+	path = vim/plugged/sudo.vim
+	url = https://github.com/vim-scripts/sudo.vim
+  ignore = dirty
+
+[submodule "vim/plugged/syntastic"]
+	path = vim/plugged/syntastic
+	url = https://github.com/jfypk/syntastic
+  ignore = dirty
+
+[submodule "vim/plugged/tabular"]
+	path = vim/plugged/tabular
+	url = https://github.com/godlygeek/tabular
+  ignore = dirty
+
+[submodule "vim/plugged/targets.vim"]
+	path = vim/plugged/targets.vim
+	url = https://github.com/wellle/targets.vim
+  ignore = dirty
+
+[submodule "vim/plugged/tcomment_vim"]
+	path = vim/plugged/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim
+  ignore = dirty
+
+[submodule "vim/plugged/telescope.nvim"]
+	path = vim/plugged/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+  ignore = dirty
+
+[submodule "vim/plugged/textobj-word-column.vim"]
+	path = vim/plugged/textobj-word-column.vim
+	url = https://github.com/coderifous/textobj-word-column.vim
+  ignore = dirty
+
+[submodule "vim/plugged/tlib_vim"]
+	path = vim/plugged/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+  ignore = dirty
+
+[submodule "vim/plugged/tmux.vim"]
+	path = vim/plugged/tmux.vim
+	url = https://github.com/tmux-plugins/vim-tmux
+  ignore = dirty
+
+[submodule "vim/plugged/typescript-vim"]
+	path = vim/plugged/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+  ignore = dirty
+
+[submodule "vim/plugged/vim"]
+	path = vim/plugged/vim
+	url = https://github.com/vim/vim
+  ignore = dirty
+
+[submodule "vim/plugged/vim-abolish"]
+	path = vim/plugged/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+  ignore = dirty
+
+[submodule "vim/plugged/vim-addon-mw-utils"]
+	path = vim/plugged/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils
+  ignore = dirty
+
+[submodule "vim/plugged/vim-change-hash-syntax"]
+	path = vim/plugged/vim-change-hash-syntax
+	url = https://github.com/ck3g/vim-change-hash-syntax
+  ignore = dirty
+
+[submodule "vim/plugged/vim-colors-solarized"]
+	path = vim/plugged/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+  ignore = dirty
+
+[submodule "vim/plugged/vim-easymotion"]
+	path = vim/plugged/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+  ignore = dirty
+
+[submodule "vim/plugged/vim-endwise"]
+	path = vim/plugged/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+  ignore = dirty
+
+[submodule "vim/plugged/vim-flavored-markdown"]
+	path = vim/plugged/vim-flavored-markdown
+	url = https://github.com/jtratner/vim-flavored-markdown
+  ignore = dirty
+
+[submodule "vim/plugged/vim-fugitive"]
+	path = vim/plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+  ignore = dirty
+
+[submodule "vim/plugged/vim-gh-line"]
+	path = vim/plugged/vim-gh-line
+	url = https://github.com/ruanyl/vim-gh-line
+  ignore = dirty
+
+[submodule "vim/plugged/vim-git"]
+	path = vim/plugged/vim-git
+	url = https://github.com/tpope/vim-git
+  ignore = dirty
+
+[submodule "vim/plugged/vim-gitgutter"]
+	path = vim/plugged/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+  ignore = dirty
+
+[submodule "vim/plugged/vim-graphql"]
+	path = vim/plugged/vim-graphql
+	url = https://github.com/jparise/vim-graphql
+  ignore = dirty
+
+[submodule "vim/plugged/vim-html-escape"]
+	path = vim/plugged/vim-html-escape
+	url = https://github.com/skwp/vim-html-escape
+  ignore = dirty
+
+[submodule "vim/plugged/vim-indent-guides"]
+	path = vim/plugged/vim-indent-guides
+	url = https://github.com/preservim/vim-indent-guides
+  ignore = dirty
+
+[submodule "vim/plugged/vim-indentobject"]
+	path = vim/plugged/vim-indentobject
+	url = https://github.com/michaeljsmith/vim-indent-object
+  ignore = dirty
+
+[submodule "vim/plugged/vim-indexed-search"]
+	path = vim/plugged/vim-indexed-search
+	url = https://github.com/henrik/vim-indexed-search
+  ignore = dirty
+
+[submodule "vim/plugged/vim-javascript"]
+	path = vim/plugged/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+  ignore = dirty
+
+[submodule "vim/plugged/vim-jsx"]
+	path = vim/plugged/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+  ignore = dirty
+
+[submodule "vim/plugged/vim-jsx-pretty"]
+	path = vim/plugged/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
+  ignore = dirty
+
+[submodule "vim/plugged/vim-jsx-typescript"]
+	path = vim/plugged/vim-jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript
+  ignore = dirty
+
+[submodule "vim/plugged/vim-markdown-preview"]
+	path = vim/plugged/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview
+  ignore = dirty
+
+[submodule "vim/plugged/vim-misc"]
+	path = vim/plugged/vim-misc
+	url = https://github.com/xolox/vim-misc
+  ignore = dirty
+
+[submodule "vim/plugged/vim-polyglot"]
+	path = vim/plugged/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+  ignore = dirty
+
+[submodule "vim/plugged/vim-ragtag"]
+	path = vim/plugged/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag
+  ignore = dirty
+
+[submodule "vim/plugged/vim-rails"]
+	path = vim/plugged/vim-rails
+	url = https://github.com/tpope/vim-rails
+  ignore = dirty
+
+[submodule "vim/plugged/vim-rake"]
+	path = vim/plugged/vim-rake
+	url = https://github.com/tpope/vim-rake
+  ignore = dirty
+
+[submodule "vim/plugged/vim-repeat"]
+	path = vim/plugged/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+  ignore = dirty
+
+[submodule "vim/plugged/vim-ruby"]
+	path = vim/plugged/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby
+  ignore = dirty
+
+[submodule "vim/plugged/vim-ruby-refactoring"]
+	path = vim/plugged/vim-ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring
+  ignore = dirty
+
+[submodule "vim/plugged/vim-rvm"]
+	path = vim/plugged/vim-rvm
+	url = https://github.com/tpope/vim-rvm
+  ignore = dirty
+
+[submodule "vim/plugged/vim-sneak"]
+	path = vim/plugged/vim-sneak
+	url = https://github.com/justinmk/vim-sneak
+  ignore = dirty
+
+[submodule "vim/plugged/vim-snippets"]
+	path = vim/plugged/vim-snippets
+	url = https://github.com/honza/vim-snippets
+  ignore = dirty
+
+[submodule "vim/plugged/vim-spec-finder"]
+	path = vim/plugged/vim-spec-finder
+	url = https://github.com/skwp/vim-spec-finder
+  ignore = dirty
+
+[submodule "vim/plugged/vim-styled-components"]
+	path = vim/plugged/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components
+  ignore = dirty
+
+[submodule "vim/plugged/vim-surround"]
+	path = vim/plugged/vim-surround
+	url = https://github.com/tpope/vim-surround
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-datetime"]
+	path = vim/plugged/vim-textobj-datetime
+	url = https://github.com/kana/vim-textobj-datetime
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-entire"]
+	path = vim/plugged/vim-textobj-entire
+	url = https://github.com/kana/vim-textobj-entire
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-function"]
+	path = vim/plugged/vim-textobj-function
+	url = https://github.com/kana/vim-textobj-function
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-function-js"]
+	path = vim/plugged/vim-textobj-function-javascript
+	url = https://github.com/thinca/vim-textobj-function-javascript
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-rubyblock"]
+	path = vim/plugged/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-rubysymbol"]
+	path = vim/plugged/vim-textobj-rubysymbol
+	url = https://github.com/bootleq/vim-textobj-rubysymbol
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-underscore"]
+	path = vim/plugged/vim-textobj-underscore
+	url = https://github.com/lucapette/vim-textobj-underscore
+  ignore = dirty
+
+[submodule "vim/plugged/vim-textobj-user"]
+	path = vim/plugged/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user
+  ignore = dirty
+
+[submodule "vim/plugged/vim-tmux-navigator"]
+	path = vim/plugged/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
+  ignore = dirty
+
+[submodule "vim/plugged/vim-unimpaired"]
+	path = vim/plugged/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+  ignore = dirty
+
+[submodule "vim/plugged/vim-v-s-s"]
+	path = vim/plugged/vim-visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search
+  ignore = dirty
+
+[submodule "vim/plugged/vim-workspace"]
+	path = vim/plugged/vim-workspace
+	url = https://github.com/jfypk/vim-workspace
+  ignore = dirty
+
+[submodule "vim/plugged/webapi-vim"]
+	path = vim/plugged/webapi-vim
+	url = https://github.com/mattn/webapi-vim
   ignore = dirty
