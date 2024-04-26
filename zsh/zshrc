@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-export PATH=/Users/jeffpark/bin:/usr/local/bin:$PATH
-export PATH="/Users/jeffpark/.local/bin:$PATH"
+export PATH=/Users/jpark/bin:/usr/local/bin:$PATH
+export PATH="/Users/jpark/.local/bin:$PATH"
 #PATH=$(pyenv root)/shims:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -77,7 +77,7 @@ alias gcm='git commit -m'
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
-alias gcom='git co main'
+alias gcom='git co master'
 alias gcp='git cp'
 alias ga='git add -A'
 alias gap='git add -p'
@@ -200,7 +200,7 @@ alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias v="/Users/jeffpark/.local/bin/lvim"
+alias v="/Users/jpark/.local/bin/lvim"
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -263,13 +263,7 @@ ii() {
     echo
 }
 
-#Betterment specific
-alias retail='cd ~/src/retail'
-alias stylecloset='cd ~/src/style-closet'
-alias cuser='cd ~/src/retail/retail && bundle exec rake create_user'
-alias retailupdate='cd ~/src/retail/retail && ./script/setup.sh'
-alias debug="RUBY_DEBUG_PORT=1234 rails s -p 3001 -P debug.pid -b 'retail.test'"
-alias webpack="cd ~/src/retail/retail && ./bin/webpack-dev-server"
+#Work specific
 alias bxr="bundle exec rspec $1"
 openpr() {
   local BRANCH_NAME URL
@@ -328,7 +322,7 @@ fco() {
   if [[ $1 == -r ]]; then
     branches=$(git branch -r) &&
       branch=$(echo "$branches" | fzf --height 10% +m) &&
-      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/origin\///") 
+      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/origin\///")
   else
     branches=$(git branch -vv) &&
       branch=$(echo "$branches" | fzf --height 10% +m) &&
@@ -342,7 +336,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/Users/jeffpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
+source "/Users/jpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
 
 ################
 # git          #
@@ -498,12 +492,25 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jpark/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jpark/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jpark/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jpark/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(/Users/jpark/.local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source "$HOME/.bootstrap/env.sh"
+source "/Users/jpark/.asdf/asdf.sh"
+export AI_GATEWAY_URL=http://0.0.0.0:5052 # URL to the local AI Gateway instance
+export LLM_DEBUG=1
+export GITLAB_SIMULATE_SAAS=true

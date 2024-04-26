@@ -123,7 +123,7 @@ end
 def install_lvim
   puts
   puts 'installing lunarvim'
-  run %(LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh))
+  run %(LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh))
   puts
   puts 'symlinking lunarvim'
 

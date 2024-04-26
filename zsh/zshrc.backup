@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$(pyenv root)/shims:$PATH
+export PATH=/Users/jpark/bin:/usr/local/bin:$PATH
+export PATH="/Users/jpark/.local/bin:$PATH"
+#PATH=$(pyenv root)/shims:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.jp_setup/zsh/zsh/ohmyzsh"
@@ -58,10 +59,10 @@ alias lsg='ll | grep'
 alias :q='exit'
 
 # vimrc editing
-alias ve='vim ~/.vimrc'
+alias ve='v ~/.vimrc'
 
 # zsh profile editing
-alias ze='vim ~/.zshrc'
+alias ze='v ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # Git Aliases
@@ -71,7 +72,7 @@ alias gst='git stash'
 alias gsp='git stash pop'
 alias gsa='git stash apply'
 alias gsh='git show'
-alias gi='vim .gitignore'
+alias gi='v .gitignore'
 alias gcm='git commit -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -119,6 +120,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gbd='git branch -d $1'
 
 # Common shell functions
 alias less='less -r'
@@ -185,6 +187,7 @@ alias -g G='| grep' # now you can do: ls foo G something
 # usage: fn foo
 # to find all files containing 'foo' in the name
 function fn() { ls **/*$1* }
+tt() {~/.jp_setup/taskwarrior/taskwarrior-tui}
 
 # From bash_profile
 alias files='cd /Volumes/Files'
@@ -196,7 +199,8 @@ alias la='ls -FGlAhp'                       # Backup preferred 'ls' implementati
 alias l='ls -lh'                            # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias edit='code'                           # edit:         Opens any file in VSCode
-alias v="vim ."
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias v="/Users/jpark/.local/bin/lvim"
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -259,6 +263,16 @@ ii() {
     echo
 }
 
+#Work specific
+alias bxr="bundle exec rspec $1"
+openpr() {
+  local BRANCH_NAME URL
+  BRANCH_NAME=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+  URL="https://github.com/Betterment/retail/compare/${BRANCH_NAME}?expand=1"
+  open $URL
+}
+
+
 ################
 # blocksize    #
 ################
@@ -299,7 +313,8 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 fi
 
 if type ag &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore-dir=public -f -g ""'
+  # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 fi
 
 fco() {
@@ -307,7 +322,7 @@ fco() {
   if [[ $1 == -r ]]; then
     branches=$(git branch -r) &&
       branch=$(echo "$branches" | fzf --height 10% +m) &&
-      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/origin\///") 
+      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/origin\///")
   else
     branches=$(git branch -vv) &&
       branch=$(echo "$branches" | fzf --height 10% +m) &&
@@ -321,7 +336,7 @@ fco() {
 
 # Key bindings
 # ------------
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/Users/jpark/.jp_setup/zsh/zsh/fzf/key-bindings.zsh"
 
 ################
 # git          #
@@ -462,8 +477,8 @@ promptinit
 # vi mode      #
 ################
 set -o vi
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=lvim
+export VISUAL=lvim
 
 ################
 # zmv          #
@@ -476,3 +491,9 @@ alias zmv="noglob zmv -W"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

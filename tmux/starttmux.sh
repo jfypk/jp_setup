@@ -9,20 +9,18 @@ then
   tmux send-keys "v" C-m
 
   tmux new-window -n 'tests'
-  tmux send-keys "retail" C-m \;
-  tmux send-keys "cd retail" C-m
+  tmux send-keys "cd gitlab-development-kit" C-m \;
   tmux send-keys "c" C-m
-  tmux splitw -h -p 50
-  tmux send-keys "retail" C-m \;
-  tmux send-keys "cd retail" C-m
+  tmux splitw -h -l 50%
+  tmux send-keys "cd gitlab-development-kit" C-m \;
   tmux send-keys "c" C-m
 
   tmux new-window -n 'shell'
-  tmux send-keys "retailupdate" C-m
-  tmux splitw -h -p 50
-  tmux splitw -v -p 50
+  tmux send-keys "cd gitlab-development-kit" C-m \;
+  tmux splitw -h -l 50%
+  tmux splitw -v -l 50%
   tmux selectp -t 1
-  tmux splitw -v -p 50
+  tmux splitw -v -l 50%
 
   # return to main vim window
   tmux select-window -t 'editor'

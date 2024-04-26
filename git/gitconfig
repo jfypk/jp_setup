@@ -139,3 +139,7 @@
 [init]
 	templatedir = /Users/jeffpark/.git-templates
 	defaultBranch = main
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[commit]
+	template = /Users/jpark/.git_commit_msg.txt
