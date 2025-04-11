@@ -1,0 +1,478 @@
+# If you come from bash you might have to change your $PATH.
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=$(pyenv root)/shims:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.jp_setup/zsh/zsh/ohmyzsh"
+
+################
+# aliases      #
+################
+
+jp=$HOME/.jp_setup
+
+#Get operating system
+platform='unknown'
+unamestr=$(uname)
+if [[ $unamestr == 'Linux' ]]; then
+  platform='linux'
+elif [[ $unamestr == 'Darwin' ]]; then
+  platform='darwin'
+fi
+
+# PS
+alias psa="ps aux"
+alias psg="ps aux | grep "
+alias psr='ps aux | grep ruby'
+
+# Moving around
+alias cdb='cd -'
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias cls='clear;ls'
+
+# Copying
+alias pbcopy='xclip -sel clip'
+
+# Show human friendly numbers and colors
+alias df='df -h'
+alias du='du -h -d 2'
+
+if [[ $platform == 'linux' ]]; then
+  alias ll='ls -Alh --color=auto'
+  alias ls='ls --color=auto'
+elif [[ $platform == 'darwin' ]]; then
+  alias ll='ls -alGh'
+  alias ls='ls -Gh'
+fi
+
+# show me files matching "ls grep"
+alias lsg='ll | grep'
+
+# mimic vim functions
+alias :q='exit'
+
+# vimrc editing
+alias ve='vim ~/.vimrc'
+
+# zsh profile editing
+alias ze='vim ~/.zshrc'
+alias zr='source ~/.zshrc'
+
+# Git Aliases
+alias gs='git status'
+alias gstsh='git stash'
+alias gst='git stash'
+alias gsp='git stash pop'
+alias gsa='git stash apply'
+alias gsh='git show'
+alias gi='vim .gitignore'
+alias gcm='git commit -m'
+alias gcim='git ci -m'
+alias gci='git ci'
+alias gco='git co'
+alias gcom='git co main'
+alias gcp='git cp'
+alias ga='git add -A'
+alias gap='git add -p'
+alias guns='git unstage'
+alias gunc='git uncommit'
+alias gm='git merge'
+alias gms='git merge --squash'
+alias gam='git amend --reset-author'
+alias grv='git remote -v'
+alias grr='git remote rm'
+alias grad='git remote add'
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias ggrc='git rebase --continue'
+alias gbi='git rebase --interactive'
+alias gl='git l'
+alias gf='git fetch'
+alias gfp='git fetch --prune'
+alias gfa='git fetch --all'
+alias gfap='git fetch --all --prune'
+alias gd='git diff'
+alias gds='git diff --staged -w'
+alias gb='git b'
+alias gpub='grb publish'
+alias gtr='grb track'
+alias gpl='git pull'
+alias gpsh='git push'
+alias gpsho='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias gnb='git nb' # new branch aka checkout -b
+alias grpl='git pull --rebase'
+alias grs='git reset'
+alias grsh='git reset --hard'
+alias gcln='git clean'
+alias gclnfd='git clean -df'
+alias gclnfdx='git clean -dfx'
+alias gsm='git submodule'
+alias gsmi='git submodule init'
+alias gsmu='git submodule update'
+alias gt='git t'
+alias gbg='git bisect good'
+alias gbb='git bisect bad'
+alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
+# Common shell functions
+alias less='less -r'
+alias tf='tail -f'
+alias l='less'
+alias lh='ls -alt | head' # see the last modified files
+alias screen='TERM=screen screen'
+alias c='clear'
+alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+alias myip='curl ipinfo.io/ip'
+#alias mcd='mkdir $1 && cd $1'
+
+# Fun, games, and info
+alias cm='cmatrix'
+alias weather='curl wttr.in/\?2nq'
+
+# todo: TODOS
+# brew install task
+# look for info on taskworrior
+
+# Zippin
+alias gz='tar -zcvf'
+
+alias tfdl='tail -f log/development.log'
+alias tftl='tail -f log/test.log'
+
+alias ka9='killall -9'
+alias k9='kill -9'
+
+# Finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# Tmux
+alias tml="tmux ls"
+alias tma="tmux attach-session -t"
+alias tmc="clear && tmux clear-history"
+alias tmk="tmux kill-session && tmux ls"
+alias tm="tmux new -s " $1
+alias tmain="~/.jp_setup/tmux/starttmux.sh"
+
+# rm
+# Override rm -i alias which makes rm prompt for every action
+alias rm='nocorrect rm'
+
+# zsh aliases
+# Global aliases
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g C='| wc -l'
+alias -g H='| head'
+alias -g L="| less"
+alias -g N="| /dev/null"
+alias -g S='| sort'
+alias -g G='| grep' # now you can do: ls foo G something
+
+# Functions
+#
+# (f)ind by (n)ame
+# usage: fn foo
+# to find all files containing 'foo' in the name
+function fn() { ls **/*$1* }
+
+# From bash_profile
+alias files='cd /Volumes/Files'
+# alias cd 'cd "$1"; ls -h;'
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias la='ls -FGlAhp'                       # Backup preferred 'ls' implementation
+alias l='ls -lh'                            # Preferred 'ls' implementation
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+alias edit='code'                           # edit:         Opens any file in VSCode
+alias v="vim ."
+alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+alias ~="cd ~"                              # ~:            Go Home
+alias c='clear'                             # c:            Clear terminal display
+alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
+alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+alias weather="curl -s 'wttr.in/?format=3'"
+alias weatherlong="curl -s 'wttr.in/?format=v2'"
+
+function cd {
+    builtin cd "$@" && ls -lh;
+}
+
+#Database stuff
+alias start_postgres="pg_ctl -D /usr/local/var/postgres start"
+alias stop_postgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pgup="start_postgres"
+alias pgdown="stop_postgres"
+alias start_mysql="mysql.server start"
+alias stop_mysql="mysql.server stop"
+alias mysqlup="start_mysql"
+alias mysqldown="stop_mysql"
+alias ngrok="/Applications/ngrok"
+
+#lr:  Full Recursive Directory Listing
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+#Search
+alias qfind="find . -name "                 # qfind:    Quickly search for file
+ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
+ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
+ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
+
+#Networking
+alias myip='curl ipinfo.io/ip'                      # myip:         Public facing IP Address
+alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
+alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
+alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
+alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
+alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
+alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
+alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
+alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+
+#ii:  display useful host related informaton
+ii() {
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditional information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date :$NC " ; date
+    echo -e "\n${RED}Machine stats :$NC " ; uptime
+    echo -e "\n${RED}Current network location :$NC " ; scselect
+    echo -e "\n${RED}Public facing IP Address :$NC " ;myip
+    #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
+    echo
+}
+
+################
+# blocksize    #
+################
+export BLOCKSIZE=1k
+
+################
+# colors       #
+################
+export GREP_COLOR='1;33'
+
+################
+# FASD         #
+################
+# only init if installed.
+#fasd_cache="$HOME/.fasd-init-bash"
+#if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+#  eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)" >| "$fasd_cache"
+#fi
+#source "$fasd_cache"
+#unset fasd_cache
+
+
+# jump to recently used items
+#alias a='fasd -a' # any
+#alias s='fasd -si' # show / search / select
+#alias d='fasd -d' # directory
+#alias f='fasd -f' # file
+#alias z='fasd_cd -d' # cd, same functionality as j in autojump
+#alias zz='fasd_cd -d -i' # interactive directory jump
+
+################
+# fzf          #
+################
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+fi
+
+if type ag &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+fi
+
+fco() {
+  local branches branch
+  if [[ $1 == -r ]]; then
+    branches=$(git branch -r) &&
+      branch=$(echo "$branches" | fzf --height 10% +m) &&
+      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/origin\///") 
+  else
+    branches=$(git branch -vv) &&
+      branch=$(echo "$branches" | fzf --height 10% +m) &&
+      git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+  fi
+}
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+################
+# git          #
+################
+# Makes git auto completion faster favouring for local completions
+__git_files () {
+    _wanted files expl 'local files' _files
+}
+
+# Don't try to glob with zsh so you can do
+# stuff like ga *foo* and correctly have
+# git add the right stuff
+alias git='noglob git'
+
+################
+# key-bindings #
+################
+bindkey -v                                          # Use vi key bindings
+# bindkey '^r' history-incremental-search-backward    # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+
+################
+# last command #
+################
+# Use Ctrl-x,Ctrl-l to get the output of the last command
+zmodload -i zsh/parameter
+insert-last-command-output() {
+LBUFFER+="$(eval $history[$((HISTCMD-1))])"
+}
+zle -N insert-last-command-output
+bindkey "^X^L" insert-last-command-output
+
+################
+# oh-my-zsh    #
+################
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="lukerandall"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+################
+# prompt       #
+################
+#Load themes from jp_setup and from user's custom prompts (themes) in ~/.zsh.prompts
+autoload promptinit
+fpath=($HOME/.jp-setup/zsh/prezto-themes $HOME/.zsh.prompts $fpath)
+promptinit
+# prompt skwp
+# prompt powerline
+
+################
+# vi mode      #
+################
+set -o vi
+export EDITOR=vim
+export VISUAL=vim
+
+################
+# zmv          #
+################
+autoload -U zmv
+alias zmv="noglob zmv -W"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

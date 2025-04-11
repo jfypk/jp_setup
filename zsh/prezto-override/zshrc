@@ -1,0 +1,5 @@
+source $HOME/.zprezto/runcoms/zshrc
+
+for config_file ($HOME/.jp_setup/zsh/zshrc) source $config_file
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
